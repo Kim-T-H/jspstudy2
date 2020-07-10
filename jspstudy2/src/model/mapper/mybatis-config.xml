@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- /src/model/mapper/mybatis-config.xml -->
+<!-- 	//public 국제 규약 -->
+<!DOCTYPE configuration PUBLIC "-//mybatis.org/DTD config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">	
+<configuration>
+	<properties resource="model/mapper/mybatis.properties" />
+	
+	<environments default="development"><!-- Connection 설정 -->
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED"><!-- POOLED 커넥설객체 설정. -->
+				<property name="driver" value="${driver}" />
+				<property name="url" value="${url}" />
+				<property name="username" value="${username}" />
+				<property name="password" value="${password}" />
+
+			</dataSource>
+		</environment>
+	</environments>
+	<mappers><!-- sql 구문 저장하는 xml, 인터페이스 설정 -->
+		<package name="model.mapper"/>
+	</mappers>
+
+</configuration>
+

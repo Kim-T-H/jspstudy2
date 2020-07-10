@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="euc-kr" ?>
+<!--  /WEB-INF/decorators.xml -->
+<decorators defaultdir="/layout">
+   <decorator name="member" page="memberlayout.jsp">
+      <pattern>/model2/member/*</pattern>
+   </decorator>
+   <decorator name="board" page="boardlayout.jsp">
+      <pattern>/model2/board/*</pattern>
+      <pattern>/model2/chat/*</pattern>
+   </decorator>
+   <excludes>
+      <pattern>/model2/member/id*</pattern>
+      <pattern>/model2/member/pw*</pattern>
+      <pattern>/model2/member/picture*</pattern>
+      <pattern>/model2/member/password*</pattern>
+      <pattern>/model2/ajax/*</pattern>
+      <pattern>/model2/board/listside</pattern>
+   </excludes>
+</decorators>
